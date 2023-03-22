@@ -59,3 +59,7 @@ void init_LEDs(void)
 	GPIOB->MODER |= GPIO_MODER_MODER6_0;
 	GPIOB->MODER |= GPIO_MODER_MODER7_0;
 }
+void display_on_LEDs(uint8_t num)
+{
+	GPIOB->ODR = num;
+}
